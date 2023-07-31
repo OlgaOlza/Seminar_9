@@ -1,2 +1,25 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Задача 69: Напишите программу, которая на вход принимает два числа A и B, и 
+// возводит число А в целую степень B с помощью рекурсии.
+// A = 3; B = 5 -> 243 (3⁵)
+// A = 2; B = 3 -> 8
+
+int WriteIntNumber(int numA, int numB, int resalt = 1)
+{
+    if (numB == 0)
+        return resalt;
+    else
+    {
+        resalt = resalt * numA; 
+        return WriteIntNumber(numA, numB -1, (resalt ));  
+    }
+}
+
+int GetInfo(string message)
+{
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
+}
+
+int numA = GetInfo("Введите большее число - A: ");
+int numB = GetInfo("Введите меньше число - B: ");
+Console.WriteLine($"A = {numA}; B = {numB} -> [ {WriteIntNumber(numA, numB)} ]");
